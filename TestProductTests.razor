@@ -1,0 +1,11 @@
+@inherits TestContext
+
+@code {
+	[Fact]
+	public void TestProductSampleTest() {
+		var cut = RenderComponent<TestProduct>();
+
+		cut.Find("button").Click();
+		Assert.NotNull(cut.Instance);
+	}
+}
